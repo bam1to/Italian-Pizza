@@ -1,0 +1,77 @@
+%form-style {
+  border: none;
+  height: 63px;
+  border-radius: 50px;
+}
+
+%active-focus {
+  border: none;
+  outline: none;
+}
+
+.subscribe-section {
+  height: 1100px;
+  overflow: hidden;
+  position: relative;
+  .subscribe {
+    margin-top: 100px;
+    height: 798px;
+    padding-bottom: 12%;
+    background-color: #27292c;
+  }
+  .subscribe-container {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      font-size: 4.6875em;
+      margin-top: 10%;
+      margin-bottom: 4%;
+    }
+    &__subtitle {
+      margin-top: 0;
+      font-family: "PT Sans", sans-serif;
+      width: 70%;
+      text-align: center;
+      font-size: 1.5625em;
+    }
+    .subscribe-form {
+      width: 59%;
+      position: relative;
+      .subscribe-input {
+        @extend %form-style;
+        padding-left: 20px;
+        width: 98%;
+        max-width: 769px;
+        background-color: #fff;
+        font-size: 1.8575em;
+        &:active,
+        &:focus {
+          @extend %active-focus;
+        }
+      }
+      .subscribe-button {
+        @extend %form-style;
+        position: absolute;
+        right: 0%;
+        color: #fff;
+        max-width: 221px;
+        padding: 0 5% 0 5%;
+        background-color: #54524f;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.5625em;
+        &:active,
+        &:focus {
+          @extend %active-focus;
+        }
+      }
+    }
+  }
+  img {
+    position: absolute;
+    left: 15rem;
+    top: 3em;
+  }
+}

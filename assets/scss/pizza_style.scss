@@ -1,0 +1,37 @@
+
+.pizza {
+    background-image: url("../img/Header Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f8f6f1;
+    height: 1080px;
+    position: relative;
+    .pizza-container {
+        &__title {
+            font-size: 3.645625em;
+            text-align: center;
+        }
+        &__subtitle {
+            font-size: 1.5625em;
+            text-align: center;
+            width: 64%;
+            margin: 0 auto;
+            margin-top: 5%;
+            font-family: 'montserrat regular';
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 160%;
+                left: 40%;
+                width: 20%;
+                height: 10px;
+                background-color: #fff;
+            }
+        }
+        img {
+            position: absolute;
+            top: -15%;
+        }
+    }
+}

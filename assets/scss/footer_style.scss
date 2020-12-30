@@ -1,0 +1,46 @@
+%flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-container {
+    font-family: 'Montserrat';
+    font-weight: lighter;
+    font-size: 1.48125em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 250px;
+    &_socials-block {
+        @extend %flex;
+        width: 50%;
+    }
+    &__title {
+        font-weight: lighter;
+        font-size: 1.975em;
+        margin-bottom: 2rem;
+    }
+    &__text {
+        margin-top: 0;
+        width: 80%;
+    }
+    &__list {
+        padding-left: 0;
+    }
+    &__list-elem:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+    &__socials {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    &__socials-elem{
+        width: 42px;
+        color: #343434;
+        &:not(:last-child) {
+            margin-right: 8%;
+        }
+    }
+}
