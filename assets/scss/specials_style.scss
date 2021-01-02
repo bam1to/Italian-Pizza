@@ -1,3 +1,7 @@
+.specials {
+    margin-top: -200px;
+}
+
 .specials-container {
     display: flex;
     flex-direction: column;
@@ -46,7 +50,8 @@
         font-size: 1.301875em;
         display: block;
         margin: 0 auto;
-        width: 11%;
+        width: 12%;
         margin-top: 4%;
+        text-align: center;
     }
 }

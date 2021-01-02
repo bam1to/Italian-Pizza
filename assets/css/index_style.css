@@ -450,8 +450,9 @@ template {
   display: none;
 }
 
-.header__block .header__title .header__subtitle, .header__block .header__heading .heading__text {
-  margin: 0;
+.subscribe-section .subscribe-container .subscribe-form .subscribe-button:active, .subscribe-section .subscribe-container .subscribe-form .subscribe-button:focus, .subscribe-section .subscribe-container .subscribe-form .subscribe-input:active, .subscribe-section .subscribe-container .subscribe-form .subscribe-input:focus, .header__block .header__read-more-button .header__button:focus, .header__block .header__read-more-button .header__button:active, .navbar__search .navbar__search-button:focus, .navbar__search .navbar__search-button:active, .button-more:focus, .button-more:active, .button:focus, .button:active {
+  border: none;
+  outline: none;
 }
 
 * {
@@ -461,6 +462,7 @@ template {
 body {
   font-family: "Open Sans", serif;
   color: #fff;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -482,10 +484,39 @@ img {
 .container {
   max-width: 1538px;
   margin: 0 auto;
-  padding: 45px 40px 0 98px;
+  padding: 45px 98px 0 98px;
+}
+
+.button {
+  font-family: myriad-pro, serif;
+  text-transform: uppercase;
+  font-size: 1.563rem;
+  padding: 8px 40px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+.button-more {
+  max-width: 332px;
+  width: 25%;
+  max-height: 73px;
+  height: 73px;
+  border-radius: 35px;
+  color: #fff;
+  letter-spacing: 3px;
+  font-size: 1.446em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.header__block .header__title .header__subtitle, .header__block .header__heading .heading__text {
+  margin: 0;
 }
 
 .header {
+  height: 1156px;
+  overflow: hidden;
+}
+.header .header-container {
   height: 1056px;
   background-color: #393c40;
   background-image: url("../img/Header Background.jpg");
@@ -555,37 +586,6 @@ img {
   font-size: 2.875rem;
 }
 
-.button {
-  font-family: myriad-pro, serif;
-  text-transform: uppercase;
-  font-size: 1.563rem;
-  padding: 8px 40px;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-}
-.button:focus, .button:active {
-  outline: none;
-  border: none;
-}
-
-.button-more {
-  max-width: 332px;
-  width: 25%;
-  max-height: 73px;
-  height: 73px;
-  border-radius: 35px;
-  color: #fff;
-  letter-spacing: 3px;
-  font-size: 1.446em;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.button-more:focus, .button-more:active {
-  outline: none;
-  border: none;
-}
-
 .header__block {
   margin-top: 118px;
   display: flex;
@@ -611,10 +611,6 @@ img {
 .header__block .header__read-more-button .header__button {
   color: #2e3034;
 }
-.header__block .header__read-more-button .header__button:focus, .header__block .header__read-more-button .header__button:active {
-  outline: none;
-  border: none;
-}
 .header__block .header_text {
   max-width: 540px;
   font-style: italic;
@@ -622,11 +618,19 @@ img {
   font-size: 1.3rem;
 }
 
-.header-dish {
-  width: 46vw;
+.header__img {
   position: absolute;
-  top: 243px;
-  left: 49%;
+  top: 215px;
+  right: 128px;
+  background-image: url("../img/header_dish.png");
+  background-size: cover;
+  width: 50%;
+  height: 1000px;
+  background-repeat: no-repeat;
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-position: right;
 }
 
 .main {
@@ -754,10 +758,15 @@ img {
 }
 
 .pizza {
+  height: 1420px;
+  overflow: hidden;
+}
+.pizza .pizza-block {
   background-image: url("../img/Header Background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #f8f6f1;
+  margin-top: 150px;
   height: 1080px;
   position: relative;
 }
@@ -786,6 +795,11 @@ img {
 .pizza .pizza-container img {
   position: absolute;
   top: -15%;
+  right: 272px;
+}
+
+.specials {
+  margin-top: -200px;
 }
 
 .specials-container {
@@ -835,19 +849,15 @@ img {
   font-size: 1.301875em;
   display: block;
   margin: 0 auto;
-  width: 11%;
+  width: 12%;
   margin-top: 4%;
+  text-align: center;
 }
 
 .subscribe-section .subscribe-container .subscribe-form .subscribe-button, .subscribe-section .subscribe-container .subscribe-form .subscribe-input {
   border: none;
   height: 63px;
   border-radius: 50px;
-}
-
-.subscribe-section .subscribe-container .subscribe-form .subscribe-button:active, .subscribe-section .subscribe-container .subscribe-form .subscribe-button:focus, .subscribe-section .subscribe-container .subscribe-form .subscribe-input:active, .subscribe-section .subscribe-container .subscribe-form .subscribe-input:focus {
-  border: none;
-  outline: none;
 }
 
 .subscribe-section {
@@ -947,8 +957,27 @@ img {
 }
 .footer-container__socials-elem {
   width: 42px;
-  color: #343434;
 }
 .footer-container__socials-elem:not(:last-child) {
   margin-right: 8%;
+}
+.footer-container__socials-elem img {
+  color: #343434;
+}
+
+@media (max-width: 1441px) {
+  .header__img {
+    height: 896px;
+    width: 56%;
+    right: 0;
+    top: 290px;
+  }
+
+  .pizza .pizza-container img {
+    right: 0;
+  }
+
+  .subscribe img {
+    left: 0;
+  }
 }

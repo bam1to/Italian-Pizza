@@ -38,9 +38,11 @@
     }
     &__socials-elem{
         width: 42px;
-        color: #343434;
         &:not(:last-child) {
             margin-right: 8%;
+        }
+        img {
+            color: #343434;
         }
     }
 }

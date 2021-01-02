@@ -1,0 +1,22 @@
+@media (max-width: 1441px) {
+    .header {
+      &__img {
+        height: 896px;
+        width: 56%;
+        right: 0;
+        top: 290px;
+      }
+    }
+    .pizza {
+      .pizza-container {
+        img {
+          right: 0;
+        }
+      }
+    }
+    .subscribe {
+        img {
+            left: 0;
+        }
+    }
+  }

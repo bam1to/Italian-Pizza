@@ -1,11 +1,16 @@
 
 .pizza {
-    background-image: url("../img/Header Background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #f8f6f1;
-    height: 1080px;
-    position: relative;
+    height: 1420px;
+    overflow: hidden;
+    .pizza-block {
+        background-image: url("../img/Header Background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #f8f6f1;
+        margin-top: 150px;
+        height: 1080px;
+        position: relative;
+    }
     .pizza-container {
         &__title {
             font-size: 3.645625em;
@@ -32,6 +37,7 @@
         img {
             position: absolute;
             top: -15%;
+            right: 272px;
         }
     }
 }

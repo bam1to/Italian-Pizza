@@ -14,47 +14,46 @@
   </head>
   <body>
     <header class="header">
-      <section class="container">
-        <nav class="navbar">
-          <ul class="navbar__list">
-            <li class="navbar__element"><a href="#">Home</a></li>
-            <li class="navbar__element"><a href="#">Menu</a></li>
-            <li class="navbar__element"><a href="#">Our Story</a></li>
-            <li class="navbar__element"><a href="#">Contact Us</a></li>
-            <li class="navbar__element">
-              <form action="" class="navbar__search">
-                <input type="text" />
-                <button type="submit" class="navbar__search-button"></button>
-              </form>
-            </li>
-          </ul>
-        </nav>
-        <section class="header__block">
-          <div>
-            <div class="header__logo">
-              <img src="assets/img/Logo.svg" alt="Logo" />
+      <div class="header-container">
+        <section class="container">
+          <nav class="navbar">
+            <ul class="navbar__list">
+              <li class="navbar__element"><a href="#">Home</a></li>
+              <li class="navbar__element"><a href="#">Menu</a></li>
+              <li class="navbar__element"><a href="#">Our Story</a></li>
+              <li class="navbar__element"><a href="#">Contact Us</a></li>
+              <li class="navbar__element">
+                <form action="" class="navbar__search">
+                  <input type="text" />
+                  <button type="submit" class="navbar__search-button"></button>
+                </form>
+              </li>
+            </ul>
+          </nav>
+          <section class="header__block">
+            <div>
+              <div class="header__logo">
+                <img src="assets/img/Logo.svg" alt="Logo" />
+              </div>
+              <div class="header__heading heading">
+                <h1 class="heading__text">Italian Food</h1>
+              </div>
+              <div class="header__title">
+                <h3 class="header__subtitle">LOREMIPSUM DOLOR</h3>
+              </div>
+              <div class="header__read-more-button">
+                <button class="header__button button">Read More</button>
+              </div>
+              <div class="header_text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                iusmod tempor incididunt ut labore et dolore magna.
+              </div>
             </div>
-            <div class="header__heading heading">
-              <h1 class="heading__text">Italian Food</h1>
-            </div>
-            <div class="header__title">
-              <h3 class="header__subtitle">LOREMIPSUM DOLOR</h3>
-            </div>
-            <div class="header__read-more-button">
-              <button class="header__button button">Read More</button>
-            </div>
-            <div class="header_text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              iusmod tempor incididunt ut labore et dolore magna.
-            </div>
-          </div>
-          <img
-            src="assets/img/header_dish.png"
-            alt="Main dish"
-            class="header-dish"
-          />
+            <div class="header__img"></div> 
+          </section>
         </section>
-      </section>
+      </div>
+
     </header>
     <main class="main">
       <section class="main-container container">
@@ -165,17 +164,19 @@
         </div>
       </section>
       <section class="pizza">
-        <div class="container">
-          <div class="pizza-container">
-            <h1 class="pizza-container__title heading">
-              Lorem Ipsum Dolor Sit Amer
-            </h1>
-            <p class="pizza-container__subtitle">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis
-            </p>
-            <img src="assets/img/piazza-pic.png" alt="" />
+        <div class="pizza-block">
+          <div class="container">
+            <div class="pizza-container">
+              <h1 class="pizza-container__title heading">
+                Lorem Ipsum Dolor Sit Amer
+              </h1>
+              <p class="pizza-container__subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis
+              </p>
+              <img src="assets/img/piazza-pic.png" alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -248,10 +249,34 @@
               dignissim enim.
             </p>
             <ul class="footer-container__socials">
-              <li class="footer-container__socials-elem"><a href="#"><img src="assets/img/social-icons/instagram-square-brands.svg" alt=""></a></li>
-              <li class="footer-container__socials-elem"><a href="#"><img src="assets/img/social-icons/facebook-square-brands.svg" alt=""></a></li>
-              <li class="footer-container__socials-elem"><a href="#"><img src="assets/img/social-icons/twitter-square-brands.svg" alt=""></a></li>
-              <li class="footer-container__socials-elem"><a href="#"><img src="assets/img/social-icons/whatsapp-square-brands.svg" alt=""></a></li>
+              <li class="footer-container__socials-elem">
+                <a href="#"
+                  ><img
+                    src="assets/img/social-icons/instagram-square-brands.svg"
+                    alt=""
+                /></a>
+              </li>
+              <li class="footer-container__socials-elem">
+                <a href="#"
+                  ><img
+                    src="assets/img/social-icons/facebook-square-brands.svg"
+                    alt=""
+                /></a>
+              </li>
+              <li class="footer-container__socials-elem">
+                <a href="#"
+                  ><img
+                    src="assets/img/social-icons/twitter-square-brands.svg"
+                    alt=""
+                /></a>
+              </li>
+              <li class="footer-container__socials-elem">
+                <a href="#"
+                  ><img
+                    src="assets/img/social-icons/whatsapp-square-brands.svg"
+                    alt=""
+                /></a>
+              </li>
             </ul>
           </div>
           <div>
