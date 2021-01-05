@@ -37,10 +37,12 @@
         margin-bottom: 5%;
     }
     &__text {
-        font-family: 'Open Sans semibold';
+        font-family: 'Open Sans';
+        font-weight: 600;
         text-align: center;
+        font-style: normal;
         margin: 0 auto;
-        font-size: $h3fzmain;
+        @include adaptiv-font(18.75, 14);
         width: 55%;
     }
     

@@ -1,18 +1,15 @@
 @import "../node_modules/normalize-scss/sass/_normalize.scss";
 @include normalize();
 
+@import "_fonts.scss";
+
+
 %active-focus {
   border: none;
   outline: none;
 }
 
-$h1fz: 2.875rem;
-$h3fzmain: 1.563rem;
-$h2fz: 4.6875rem;
-$h3fzmb: 1.823rem;
-$pfzmb: 1.4325rem;
-$buttfz: 1.446rem;
-
+//mixin for responsive font implementation
 $maxWidth: 1440;
 @mixin adaptiv-font($pcSize, $mobSize) {
   $addSize: $pcSize - $mobSize;
@@ -27,7 +24,7 @@ $maxWidth: 1440;
 }
 
 body {
-  font-family: "Open Sans", serif;
+  @include open-sans;
   color: #fff;
   overflow-y: auto;
   overflow-x: hidden;
@@ -56,7 +53,7 @@ img {
 .button {
   font-family: myriad-pro, serif;
   text-transform: uppercase;
-  font-size: $h3fzmain;
+  @include adaptiv-font(25, 18);
   padding: 8px 40px;
   border-radius: 30px;
   border: none;
@@ -84,12 +81,14 @@ img {
   }
 }
 
-@import "header_style";
-@import "body_style";
-@import "discription_style";
-@import "example_style";
-@import "pizza_style";
-@import "specials_style";
-@import "subscribe_style";
-@import "footer_style";
-@import "media_style";
+@import "_header.scss";
+@import "_main.scss";
+@import "_discription.scss";
+@import "_example.scss";
+@import "_pizza.scss";
+@import "_specials.scss";
+@import "_subscribe.scss";
+@import "_footer.scss";
+
+//media queries styles
+@import "_media.scss";

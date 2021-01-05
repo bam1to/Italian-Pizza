@@ -13,11 +13,11 @@
     }
     .pizza-container {
         &__title {
-            font-size: 3.645625em;
+            @include adaptiv-font(58.33, 40);
             text-align: center;
         }
         &__subtitle {
-            font-size: $h3fzmain;
+            @include adaptiv-font(25, 18);
             text-align: center;
             width: 64%;
             margin: 0 auto;
@@ -37,7 +37,7 @@
         img {
             position: absolute;
             top: -15%;
-            right: 272px;
+            right: 8%;
         }
     }
 }

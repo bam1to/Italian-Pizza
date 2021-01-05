@@ -1,3 +1,5 @@
+
+/*media query for screen size 1440px*/
 @media (max-width: 1441px) {
   .header {
     .navbar {
@@ -18,8 +20,7 @@
       align-items: center;
     }
     &__text {
-        
-    text-align: center;
+      text-align: center;
     }
   }
   .pizza {
@@ -36,10 +37,8 @@
   }
 }
 
+/*media query for screen size 1024px*/
 @media (max-width: 1025px) {
-  .button-more {
-    font-size: $buttfz - 0.2;
-  }
   .header {
     height: 1000px;
     &__block {
@@ -48,6 +47,7 @@
     &__block {
       flex-direction: column;
       align-items: center;
+      margin-top: -25px;
     }
     &__text-part {
       display: flex;
@@ -61,16 +61,7 @@
       margin-right: 20px;
     }
   }
-  .menu-block {
-    &__container {
-      .menu-block__title {
-        font-size: $h3fzmb - 0.2;
-      }
-      .menu-block__subtitle {
-        font-size: $pfzmb - 0.2;
-      }
-    }
-  }
+  
   .examples {
     .grid-container {
       row-gap: 50px;
@@ -80,19 +71,45 @@
       .example-container {
         padding-top: 5%;
         flex-direction: column-reverse;
-      }
-      .example-block {
-        padding-top: 0;
-        align-self: center;
-        align-items: center;
-        text-align: center;
+        .example-block {
+          padding-top: 0;
+          align-self: center;
+          align-items: center;
+          text-align: center;
+          &__title {
+            text-align: center;
+          }
+        }
       }
     }
   }
   .pizza {
     .pizza-container {
       img {
-        top: 100px;
+        top: 25px;
+      }
+    }
+  }
+}
+
+/*media query for screen sizes from 1024px to 1366px*/
+// adaptive img
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  .pizza {
+    .pizza-container {
+      img {
+        top: -6%;
+      }
+    }
+  }
+}
+/*media query for screen size 768px*/
+// not finished
+@media screen and (max-width: 769px) {
+  .pizza {
+    .pizza-container {
+      img {
+        top: 300px;
       }
     }
   }

@@ -79,8 +79,8 @@
   }
 }
 .heading {
-  font-family: "Reey", serif;
-  font-size: $h1fz;
+  @include reey-reg;
+  @include adaptiv-font(92, 70)
 }
 .header__block {
   margin-top: 118px;

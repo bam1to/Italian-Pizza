@@ -20,7 +20,7 @@
     flex-direction: column;
     align-items: center;
     &__title {
-      font-size: 4.6875em;
+      @include adaptiv-font(75, 60);
       margin-top: 10%;
       margin-bottom: 4%;
     }
@@ -29,7 +29,7 @@
       font-family: "PT Sans", sans-serif;
       width: 70%;
       text-align: center;
-      font-size: $h3fzmain;
+      @include adaptiv-font(25, 18);
     }
     .subscribe-form {
       width: 59%;
@@ -56,7 +56,7 @@
         background-color: #54524f;
         font-weight: bold;
         text-transform: uppercase;
-        font-size: $h3fzmain;
+        @include adaptiv-font(25, 18);
         &:active,
         &:focus {
           @extend %active-focus;
