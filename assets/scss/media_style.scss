@@ -1,22 +1,99 @@
 @media (max-width: 1441px) {
-    .header {
-      &__img {
-        height: 896px;
-        width: 56%;
-        right: 0;
-        top: 290px;
+  .header {
+    .navbar {
+      &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
       }
     }
-    .pizza {
-      .pizza-container {
-        img {
-          right: 0;
-        }
-      }
+    &__block {
+      background: none;
+      justify-content: center;
     }
-    .subscribe {
-        img {
-            left: 0;
-        }
+    &__text-part {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__text {
+        
+    text-align: center;
     }
   }
+  .pizza {
+    .pizza-container {
+      img {
+        right: 0;
+      }
+    }
+  }
+  .subscribe {
+    img {
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .button-more {
+    font-size: $buttfz - 0.2;
+  }
+  .header {
+    height: 1000px;
+    &__block {
+      background: none;
+    }
+    &__block {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__text-part {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__text {
+      text-align: center;
+    }
+    .navbar__element:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  .menu-block {
+    &__container {
+      .menu-block__title {
+        font-size: $h3fzmb - 0.2;
+      }
+      .menu-block__subtitle {
+        font-size: $pfzmb - 0.2;
+      }
+    }
+  }
+  .examples {
+    .grid-container {
+      row-gap: 50px;
+      .example-container:first-child {
+        flex-direction: column;
+      }
+      .example-container {
+        padding-top: 5%;
+        flex-direction: column-reverse;
+      }
+      .example-block {
+        padding-top: 0;
+        align-self: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+  .pizza {
+    .pizza-container {
+      img {
+        top: 100px;
+      }
+    }
+  }
+}

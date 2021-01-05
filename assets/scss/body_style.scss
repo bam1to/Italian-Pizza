@@ -13,11 +13,12 @@
         max-width: 820px;
         margin-bottom: 7%;
         &__title {
-            font-size: 4.6875em;
+            @include adaptiv-font(75, 50);
+            text-align: center;
         }
         &__subtitle {
             text-align: center;
-            font-size: 1.69125em;
+            @include adaptiv-font(27.06, 20);
             color: #2f3135;
         }
     }
@@ -34,14 +35,13 @@
 
         }
         &__title {
-            font-size: 1.823em;
+            @include adaptiv-font(29.168, 22);
             & h3 {
                 margin: 0;
             }
         }
         &__subtitle {
-            font-size: 1.4325em;
-
+            @include adaptiv-font(22.92, 18)
         }
     }
     .main-container__button {

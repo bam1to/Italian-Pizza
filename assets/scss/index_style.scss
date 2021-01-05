@@ -6,6 +6,22 @@
   outline: none;
 }
 
+$h1fz: 2.875rem;
+$h3fzmain: 1.563rem;
+$h2fz: 4.6875rem;
+$h3fzmb: 1.823rem;
+$pfzmb: 1.4325rem;
+$buttfz: 1.446rem;
+
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}
+
 * {
   box-sizing: border-box;
 }
@@ -32,7 +48,7 @@ img {
   object-fit: fill;
 }
 .container {
-  max-width: 1538px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 45px 98px 0 98px;
 }
@@ -40,7 +56,7 @@ img {
 .button {
   font-family: myriad-pro, serif;
   text-transform: uppercase;
-  font-size: 1.563rem;
+  font-size: $h3fzmain;
   padding: 8px 40px;
   border-radius: 30px;
   border: none;
@@ -59,7 +75,7 @@ img {
   border-radius: 35px;
   color: #fff;
   letter-spacing: 3px;
-  font-size: 1.446em;
+  @include adaptiv-font(23.136, 18);
   text-transform: uppercase;
   font-weight: bold;
   &:focus,
@@ -77,4 +93,3 @@ img {
 @import "subscribe_style";
 @import "footer_style";
 @import "media_style";
-

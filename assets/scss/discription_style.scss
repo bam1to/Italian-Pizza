@@ -9,7 +9,7 @@
 
         &__title{
             color: #fff;
-            font-size: 4.6875em;
+            @include adaptiv-font(75, 50);
             text-align: center;
 
         }
@@ -22,7 +22,7 @@
             color: #fff;
             max-width: 500px;
             width: 48%;
-            font-size: 1.1em;
+            @include adaptiv-font(17.6, 14);
         }
         &__button {
             margin-top: 5%;
