@@ -584,7 +584,7 @@ img {
   border-radius: 35px;
   color: #fff;
   letter-spacing: 3px;
-  font-size: calc( 18px + 5.136 * ((100vw - 320px) / 1120) );
+  font-size: calc( 16px + 7.136 * ((100vw - 320px) / 1120) );
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -603,7 +603,14 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.header .header-burger {
+  display: none;
+}
 
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
 .navbar__list {
   margin: 0;
   display: flex;
@@ -663,7 +670,7 @@ img {
 
 .heading {
   font-family: "Reey-Regular", sans-serif;
-  font-size: calc( 70px + 22 * ((100vw - 320px) / 1120) );
+  font-size: calc( 63px + 29 * ((100vw - 320px) / 1120) );
 }
 
 .header__block {
@@ -680,6 +687,8 @@ img {
 }
 .header__block .header__heading .heading__text {
   font-size: calc( 77px + 14.67 * ((100vw - 320px) / 1120) );
+  text-align: center;
+  line-height: 130px;
 }
 .header__block .header__title {
   font-size: calc( 18px + 7 * ((100vw - 320px) / 1120) );
@@ -741,9 +750,10 @@ img {
 .main-container .menu-block__container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-end;
   width: 25%;
+  text-align: center;
 }
 .main-container .menu-block__title {
   font-size: calc( 22px + 7.168 * ((100vw - 320px) / 1120) );
@@ -756,13 +766,13 @@ img {
 }
 .main-container .main-container__button {
   background-color: #343434;
-  margin: 5% 3% 5% 0;
+  margin: 5% 0 5% 0;
   border: none;
 }
 
 .discription {
   background-color: #27292c;
-  height: 556px;
+  height: 600px;
 }
 .discription .discription-block {
   display: flex;
@@ -822,7 +832,7 @@ img {
   background-color: #27292c;
   border: none;
   width: 60%;
-  font-size: 1.823125em;
+  font-size: calc( 22px + 7.17 * ((100vw - 320px) / 1120) );
   margin-top: 3%;
 }
 .grid-container .example-container .example-block__button:focus, .grid-container .example-container .example-block__button:active {
@@ -971,20 +981,21 @@ img {
 .subscribe-section .subscribe-container .subscribe-form {
   width: 59%;
   position: relative;
+  z-index: 2;
 }
 .subscribe-section .subscribe-container .subscribe-form .subscribe-input {
   padding-left: 20px;
   width: 98%;
   max-width: 769px;
   background-color: #fff;
-  font-size: 1.8575em;
+  font-size: calc( 22px + 7.72 * ((100vw - 320px) / 1120) );
 }
 .subscribe-section .subscribe-container .subscribe-form .subscribe-button {
   position: absolute;
   right: 0%;
   color: #fff;
   max-width: 221px;
-  padding: 0 5% 0 5%;
+  padding: 0 3% 0 3%;
   background-color: #54524f;
   font-weight: bold;
   text-transform: uppercase;
@@ -1005,7 +1016,7 @@ img {
 .footer-container {
   font-family: "Montserrat";
   font-weight: lighter;
-  font-size: 1.48125em;
+  font-size: calc( 16px + 7.7 * ((100vw - 320px) / 1120) );
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1016,7 +1027,7 @@ img {
 }
 .footer-container__title {
   font-weight: lighter;
-  font-size: 1.975em;
+  font-size: calc( 24px + 7.6 * ((100vw - 320px) / 1120) );
   margin-bottom: 2rem;
 }
 .footer-container__text {
@@ -1042,6 +1053,9 @@ img {
 }
 .footer-container__socials-elem img {
   color: #343434;
+}
+.footer-container__block:not(:last-child) {
+  margin-right: 1%;
 }
 
 /*media query for screen size 1440px*/
@@ -1107,6 +1121,7 @@ img {
   .examples .grid-container .example-container {
     padding-top: 5%;
     flex-direction: column-reverse;
+    align-items: center;
   }
   .examples .grid-container .example-container .example-block {
     padding-top: 0;
@@ -1119,7 +1134,7 @@ img {
   }
 
   .pizza .pizza-container img {
-    top: 25px;
+    top: 0px;
   }
 }
 /*media query for screen sizes from 1024px to 1366px*/
@@ -1128,9 +1143,117 @@ img {
     top: -6%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .pizza .pizza-container img {
+    top: 10%;
+  }
+}
 /*media query for screen size 768px*/
 @media screen and (max-width: 769px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .header .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+    left: 0;
+  }
+  .header .navbar__list {
+    padding-left: 0;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: #393c40;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .header .navbar__list.active {
+    top: 0;
+    transition: all 0.5s ease 0s;
+  }
+  .header .navbar .navbar__element {
+    margin-right: 0;
+    font-size: 30px;
+  }
+  .header .navbar .navbar__element:not(:last-child) {
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
+  .header .header-burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 100;
+    margin: 20px 20px 0 0;
+  }
+  .header .header-burger::after, .header .header-burger::before {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+  }
+  .header .header-burger::after {
+    bottom: 0;
+  }
+  .header .header-burger::before {
+    top: 0;
+  }
+  .header .header-burger span {
+    background-color: #fff;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transition: all 0.5s ease 0s;
+  }
+  .header .header-burger.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header .header-burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header .header-burger.active span {
+    transform: scale(0);
+  }
+
+  .examples .example-container .example-block__title {
+    margin-top: 0;
+  }
+
+  .pizza {
+    height: 790px;
+  }
+  .pizza .pizza-block {
+    height: 474px;
+  }
   .pizza .pizza-container img {
-    top: 300px;
+    display: none;
+  }
+  .pizza .pizza-container__subtitle::after {
+    top: 130%;
+  }
+
+  .subscribe-section {
+    height: 700px;
+  }
+  .subscribe-section .subscribe {
+    height: 550px;
+  }
+
+  .footer-container {
+    margin-bottom: 150px;
   }
 }

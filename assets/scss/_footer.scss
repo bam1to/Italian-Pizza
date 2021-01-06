@@ -7,7 +7,7 @@
 .footer-container {
     font-family: 'Montserrat';
     font-weight: lighter;
-    font-size: 1.48125em;
+    @include adaptiv-font(23.7, 16);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,7 +18,7 @@
     }
     &__title {
         font-weight: lighter;
-        font-size: 1.975em;
+        @include adaptiv-font(31.6, 24);
         margin-bottom: 2rem;
     }
     &__text {
@@ -44,5 +44,8 @@
         img {
             color: #343434;
         }
+    }
+    &__block:not(:last-child) {
+        margin-right: 1%;
     }
 }

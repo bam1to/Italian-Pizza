@@ -12,9 +12,14 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .header-burger {
+    display: none;
+  }
 }
 
 .navbar {
+  display: flex;
+  justify-content: flex-end;
   &__list {
     margin: 0;
     display: flex;
@@ -80,7 +85,7 @@
 }
 .heading {
   @include reey-reg;
-  @include adaptiv-font(92, 70)
+  @include adaptiv-font(92, 63)
 }
 .header__block {
   margin-top: 118px;
@@ -95,6 +100,8 @@
     .heading__text {
       @extend %margins-reset;
       @include adaptiv-font(91.67, 77);
+      text-align: center;
+      line-height: 130px;
     }
   }
   .header__title {
@@ -116,7 +123,6 @@
       }
     }
   }
-
   .header__text {
     max-width: 540px;
     font-style: italic;

@@ -72,7 +72,7 @@ img {
   border-radius: 35px;
   color: #fff;
   letter-spacing: 3px;
-  @include adaptiv-font(23.136, 18);
+  @include adaptiv-font(23.136, 16);
   text-transform: uppercase;
   font-weight: bold;
   &:focus,

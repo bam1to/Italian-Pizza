@@ -27,7 +27,7 @@
                 background-color: #27292c;
                 border: none;
                 width: 60%;
-                font-size: 1.823125em;
+                @include adaptiv-font(29.17, 22);
                 margin-top: 3%;
                 &:focus,
                 &:active {
