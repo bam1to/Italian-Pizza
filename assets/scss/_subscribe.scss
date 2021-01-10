@@ -20,6 +20,7 @@
     flex-direction: column;
     align-items: center;
     &__title {
+      text-align: center;
       @include adaptiv-font(75, 60);
       margin-top: 10%;
       margin-bottom: 4%;

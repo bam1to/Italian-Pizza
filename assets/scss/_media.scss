@@ -72,6 +72,7 @@
         flex-direction: column-reverse;
         align-items: center;
         .example-block {
+          width: 100%;
           padding-top: 0;
           align-self: center;
           align-items: center;
@@ -218,6 +219,7 @@
       }
     }
   }
+
   .subscribe-section {
     height: 700px;
     .subscribe {
@@ -225,6 +227,103 @@
     }
   }
   .footer-container {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    .menu-block {
+      flex-direction: column;
+      align-items: center;
+      &__container {
+        margin-bottom: 5%;
+        width: 100%;
+        & p {
+          width: 100%;
+        }
+      }
+      &__title {
+        width: 50%;
+      }
+    }
+    .main-container__button {
+      width: 50%;
+      height: 42px;
+      margin-bottom: 10%;
+    }
+  }
+  .discription {
+    .discription-block {
+      &__text-container {
+        flex-direction: column;
+        align-items: center;
+        & p {
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .specials {
+    .specials-container {
+      &__top-block {
+        flex-direction: column;
+        align-items: center;
+      }
+      &__block {
+        margin: 5% 0;
+        width: 100%;
+      }
+      &__subtitle {
+        text-align: center;
+      }
+      &__text,
+      &__undertext {
+        width: 100%;
+      }
+    }
+  }
+  .subscribe-section {
+    .subscribe {
+      height: 450px;
+      img {
+        display: none;
+      }
+
+      .subscribe-form {
+        width: 100%;
+        margin-top: 10%;
+      }
+    }
+  }
+  .footer {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      &__socials-block {
+        width: auto;
+      }
+      &__text,
+      &__socials,
+      &__list {
+        display: none;
+      }
+      &__block {
+        margin-right: 0;
+      }
+      &__title,
+      &__list {
+        text-align: center;
+      }
+      &__list {
+        transition: all 0.5s ease 0s;
+      }
+
+      &__list.dBlock {
+        transform: scale(0);
+        transition: all 0.5s ease 0s;
+      }
+    }
   }
 }

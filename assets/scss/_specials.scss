@@ -22,13 +22,13 @@
     }
     &__title {
         color: #393939;
-        font-size: 2.604375em;
+        @include adaptiv-font(41.67, 32);
         text-align: center;
     }
     &__subtitle {
         color: #333d42;
         margin-top: 0%;
-        font-size: 1.171875em;
+        @include adaptiv-font(18.75, 14);
         text-align: start;
         line-height: 1.4em;
     }
@@ -49,7 +49,7 @@
     &__undertext {
         font-family: 'Open Sans';
         font-weight: bold;
-        font-size: 1.301875em;
+        @include adaptiv-font(20.83, 14);
         display: block;
         margin: 0 auto;
         width: 12%;

@@ -47,7 +47,7 @@ img {
 .container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 45px 98px 0 98px;
+  padding: 3.125% 6.8% 0 6.8%;
 }
 
 .button {
@@ -80,6 +80,12 @@ img {
     @extend %active-focus;
   }
 }
+
+.dBlock {
+  display: block !important;
+}
+
+
 
 @import "_header.scss";
 @import "_main.scss";
