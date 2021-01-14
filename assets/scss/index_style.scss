@@ -1,8 +1,17 @@
 @import "../node_modules/normalize-scss/sass/_normalize.scss";
 @include normalize();
 
-@import "_fonts.scss";
+// @import "_fonts.scss";
 
+@mixin reey-reg {
+  font-family: "Reey-Regular", sans-serif;
+}
+
+@mixin open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
 
 %active-focus {
   border: none;
@@ -84,8 +93,6 @@ img {
 .dBlock {
   display: block !important;
 }
-
-
 
 @import "_header.scss";
 @import "_main.scss";
