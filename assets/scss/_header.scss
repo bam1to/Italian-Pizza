@@ -61,7 +61,7 @@
       border: none;
       right: 0px;
       top: 4px;
-      background-color: #fff;
+      background-color: transparent;
       border-radius: 40px;
       &:focus,
       &:active {
@@ -75,6 +75,7 @@
       border-radius: 40px;
       outline: none;
       padding-left: 20px;
+      padding-right: 45px;
     }
     &:focus,
     &:active {

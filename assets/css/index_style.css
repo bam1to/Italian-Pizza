@@ -656,7 +656,7 @@ img {
   border: none;
   right: 0px;
   top: 4px;
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 40px;
 }
 .navbar__search input {
@@ -666,6 +666,7 @@ img {
   border-radius: 40px;
   outline: none;
   padding-left: 20px;
+  padding-right: 45px;
 }
 .navbar__search:focus, .navbar__search:active {
   outline: none;
@@ -808,6 +809,7 @@ img {
   margin-top: 1%;
   display: grid;
   grid-template-rows: repeat(2, 50%);
+  row-gap: 5%;
 }
 .grid-container .example-container {
   display: flex;
